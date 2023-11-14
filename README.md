@@ -1,7 +1,7 @@
 # FOOD API
 
 <p align="center">
-  <img src="image.png" width="300">
+  <img src="./image/image.png" width="300">
 </p>
 
 ## Description
