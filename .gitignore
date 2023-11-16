@@ -4,6 +4,7 @@
 
 # data
 *.xlsx
+/db 
 
 # Logs
 logs
