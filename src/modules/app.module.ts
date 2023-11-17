@@ -4,6 +4,8 @@ import { ConfigModule } from '@nestjs/config';
 
 import { FoodModule } from './food.module';
 
+import { Nutrient } from 'src/entities/nutrient.entity';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -19,7 +21,7 @@ import { FoodModule } from './food.module';
       database: process.env.DB_NAME,
       synchronize: true,
       entities: [
-        __dirname + "entities/*.ts"
+        Nutrient
       ],
       "logging": true
     }),
