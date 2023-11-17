@@ -4,7 +4,7 @@
   <img src="./image/image.png" width="300">
 </p>
 
-## Description
+## 소개
 식품 영양 성분을 살펴보는 API 입니다.
 
 [식품의약품안전처](https://various.foodsafetykorea.go.kr/nutrient/)에서 제공하는 식품 영양 성분 DB는 조리식품과 국내에 유통되는 가공식품 등에 대해 수집·분석한 정보로 구성되어 있습니다.
@@ -53,7 +53,7 @@ yarn install
 ## DB 설정
 [자세히](/docs/DB.md)
 
-## Running the app
+## 실행 방법
 
 ```bash
 # development
@@ -66,7 +66,7 @@ yarn run start:dev
 yarn run start:prod
 ```
 
-## Test
+## 테스트
 
 ```bash
 # unit tests
