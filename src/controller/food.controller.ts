@@ -13,12 +13,28 @@ export class FoodController {
     @Query('manufacturer') manufacturer?: string,
     @Query('foodCode') foodCode?: string,
   ) {
-    const query: Food = {
-      name: name,
-      year: +year,
-      maker: manufacturer,
-      code: foodCode
+    const query = new Food();
+
+    if (name == null && year == null && manufacturer == null && foodCode == null) {
+      return await this.foodService.findAll();
     }
+
+    if (name !== null && name !== undefined) {
+      query.name = name;
+    }
+
+    if (year !== null && year !== undefined) {
+      query.year = +year;
+    }
+
+    if (manufacturer !== null && manufacturer !== undefined) {
+      query.maker = manufacturer;
+    }
+
+    if (foodCode != null && foodCode !== undefined) {
+      query.code = foodCode;
+    }
+
     return await this.foodService.find(query);
   }
 
