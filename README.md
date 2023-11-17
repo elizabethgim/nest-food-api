@@ -9,7 +9,8 @@
 
 [식품의약품안전처](https://various.foodsafetykorea.go.kr/nutrient/)에서 제공하는 식품 영양 성분 DB는 조리식품과 국내에 유통되는 가공식품 등에 대해 수집·분석한 정보로 구성되어 있습니다.
 
-> 해당 API는 다음과 같은 요청 인자와 출력 정보를 보여줍니다.
+> 해당 API는 다음과 같은 요청 인자와 출력 정보를 보여줍니다.  
+> 사용되는 엑셀 파일의 일부 항목들은 출력 항목들을 기반으로 전처리되었습니다.
 
 ### 요청  
 
@@ -46,45 +47,34 @@
 
 ### package
 ```bash
-$ yarn install
+yarn install
 ```
 
-## DB
-```bash
-$ docker-compose up -d
-```
-
-```bash
-$ yarn run ts-node src/db/excel-to-csv.ts
-```
-
-```bash
-$ mysql -h 127.0.0.1 -P 3308 -u root -p --local-infile=1
-```
-
+## DB 설정
+[자세히](/docs/DB.md)
 
 ## Running the app
 
 ```bash
 # development
-$ yarn run start
+yarn run start
 
 # watch mode
-$ yarn run start:dev
+yarn run start:dev
 
 # production mode
-$ yarn run start:prod
+yarn run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn run test
+yarn run test
 
 # e2e tests
-$ yarn run test:e2e
+yarn run test:e2e
 
 # test coverage
-$ yarn run test:cov
+yarn run test:cov
 ```
