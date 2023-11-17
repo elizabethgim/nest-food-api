@@ -19,7 +19,7 @@ import { FoodModule } from './food.module';
       database: process.env.DB_NAME,
       synchronize: true,
       entities: [
-        "src/entities/*.ts"
+        __dirname + "entities/*.ts"
       ],
       "logging": true
     }),
