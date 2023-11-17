@@ -2,7 +2,7 @@ import { Column, Entity, PrimaryColumn } from "typeorm"
 
 @Entity({ name: 'foods' })
 export class Nutrient {
-    @PrimaryColumn()
+    @PrimaryColumn({ type: "int" })
     id: number
 
     @Column({ type: "varchar" })
