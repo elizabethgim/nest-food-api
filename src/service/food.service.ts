@@ -13,6 +13,10 @@ export class FoodService {
   ) { }
 
 
+  async findAll() {
+    return await this.nutrientRepository.find();
+  }
+
   async findOne(id: number): Promise<Nutrient> {
     return await this.nutrientRepository.findOne({ where: { id } });
   }
