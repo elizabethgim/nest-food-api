@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestj
 import { FoodService } from '../service/food.service';
 import { Food } from 'src/dto/food.dto';
 
-@Controller('food')
+@Controller('foods')
 export class FoodController {
   constructor(private readonly foodService: FoodService) { }
 
