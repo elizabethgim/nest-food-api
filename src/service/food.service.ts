@@ -12,6 +12,27 @@ export class FoodService {
     private nutrientRepository: Repository<Nutrient>,
   ) { }
 
+  async find(food: Food) {
+    const queryBuilder = this.nutrientRepository.createQueryBuilder('foods');
+
+    if (food.name !== undefined && food.name !== null) {
+      queryBuilder.andWhere('foods.name = :name', { name: food.name });
+    }
+
+    if (food.year !== undefined && food.year !== null) {
+      queryBuilder.andWhere('foods.year = :year', { year: food.year });
+    }
+
+    if (food.maker !== undefined && food.maker !== null) {
+      queryBuilder.andWhere('foods.maker_name = :maker', { maker: food.maker });
+    }
+
+    if (food.code !== undefined && food.code !== null) {
+      queryBuilder.andWhere('foods.code = :code', { code: food.code });
+    }
+
+    return await queryBuilder.getMany();
+  }
 
   async findAll() {
     return await this.nutrientRepository.find();
