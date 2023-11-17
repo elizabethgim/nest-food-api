@@ -6,7 +6,7 @@ import { Food } from 'src/dto/food.dto';
 export class FoodController {
   constructor(private readonly foodService: FoodService) { }
 
-  @Get()
+  @Get('/search')
   async searchFood(
     @Query('name') name?: string,
     @Query('year') year?: string,
